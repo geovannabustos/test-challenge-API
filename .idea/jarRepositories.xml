@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="framework-libs-snapshot" />
+      <option name="url" value="https://peigo.jfrog.io/artifactory/framework-libs-snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="karate-kafka" />
+      <option name="name" value="karate-kafka" />
+      <option name="url" value="https://raw.github.com/sdaas/karate-kafka/mvn-repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="framework-libs-release" />
+      <option name="url" value="https://peigo.jfrog.io/artifactory/framework-libs-release" />
+    </remote-repository>
+  </component>
+</project>
