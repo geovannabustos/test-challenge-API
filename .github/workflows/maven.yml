@@ -31,4 +31,4 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Execute Tests
-      uses: mvn test -Dtest=RunnerRestfulBooker#testRunner
+      run: mvn clean test -Dtest=RunnerRestfulBooker#testRunner
