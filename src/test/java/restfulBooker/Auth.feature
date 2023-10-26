@@ -17,7 +17,7 @@ Feature: Auth - CreateToken
     And match response.token == '#present'
     And match response.token == '#string'
 
-  @CreateTokenFailed @UnHappyPathss
+  @CreateTokenFailed @UnHappyPaths
   Scenario Outline: Creates a new auth token failed due to parameter error
     * def entrant =
     """

@@ -21,7 +21,7 @@ public class RunnerRestfulBooker {
     @Test
     public void testRunnerUnHappyPathss() throws IOException {
         Results results = Runner.path("src/test/java/restfulBooker")
-                .tags("@UnHappyPathss")
+                .tags("@UnHappyPaths")
                 .outputCucumberJson(true)
                 .parallel(1);
         generateReport(results.getReportDir());

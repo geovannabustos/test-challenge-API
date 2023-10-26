@@ -35,7 +35,7 @@ Feature: Booking - GetBookingIds
     And def res = karate.match("response contains { bookingid: '#number' }")
     And match res == { pass: true, message: null }
 
-  @GetBookingIdsSuccessfulFilterFailed @UnHappyPathss
+  @GetBookingIdsSuccessfulFilterFailed @UnHappyPaths
   Scenario: Obtain the identifiers of all reservations that exist within the API failed
     Given url 'https://restful-booker.herokuapp.com/booking'
     And header firstname = ''

@@ -51,7 +51,7 @@ Feature: Booking - UpdateBooking
       | id | firstname |  | lastname | totalprice | depositpaid | checkin      | checkout     | additionalneeds |
       | 1  | 'Jim'     |  | 'Brown'  | 111        | true        | '2018-01-01' | '2018-01-01' | 'Breakfast'     |
 
-  @UpdateBookingFailed @UnHappyPathss
+  @UpdateBookingFailed @UnHappyPaths
   Scenario Outline: Update a current booking failed due to parameter error
     * def authToken = call read('Auth.feature@CreateTokenSuccessful')
     * def tokenValue = authToken.response.token
@@ -90,7 +90,7 @@ Feature: Booking - UpdateBooking
       | uno | 'Jim'     | 'Brown'  | 111        | true        | '2018-01-01' | '2018-01-01' | 'Breakfast'     |
 
 
-  @UpdateBookingFailedIdIncorrect @UnHappyPathss
+  @UpdateBookingFailedIdIncorrect @UnHappyPaths
   Scenario Outline: Update a current booking failed due to id incorrect
     * def authToken = call read('Auth.feature@CreateTokenSuccessful')
     * def tokenValue = authToken.response.token
@@ -122,7 +122,7 @@ Feature: Booking - UpdateBooking
       | 0   | 'Jim'     | 'Brown'  | 111        | true        | '2018-01-01' | '2018-01-01' | 'Breakfast'     |
       | uno | 'Jim'     | 'Brown'  | 111        | true        | '2018-01-01' | '2018-01-01' | 'Breakfast'     |
 
-  @UpdateBookingFailedTokenIncorrect @UnHappyPathss
+  @UpdateBookingFailedTokenIncorrect @UnHappyPaths
   Scenario Outline: Update a current booking failed due to token incorrect
     * def tokenValue = 'c3a732fd54119bb'
     * def entrant = {}
@@ -138,7 +138,7 @@ Feature: Booking - UpdateBooking
       | id |
       | 1  |
 
-  @UpdateBookingFailedCookieMissing @UnHappyPathss
+  @UpdateBookingFailedCookieMissing @UnHappyPaths
   Scenario Outline: Update a current booking failed due to cookie missing
     * def entrant = {}
     Given url 'https://restful-booker.herokuapp.com/booking/<id>'

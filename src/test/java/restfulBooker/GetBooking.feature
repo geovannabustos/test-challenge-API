@@ -18,7 +18,7 @@ Feature: Booking - GetBooking
       | id |
       | 1  |
 
-  @GetBookingFailed @UnHappyPathss
+  @GetBookingFailed @UnHappyPaths
   Scenario Outline: Obtain a specific booking based upon the booking id provided failed due to parameter error
     Given url 'https://restful-booker.herokuapp.com/booking/<id>'
     And header Accept = 'application/json'

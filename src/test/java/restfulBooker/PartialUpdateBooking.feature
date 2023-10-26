@@ -39,7 +39,7 @@ Feature: Booking - PartialUpdateBooking
       | id | firstname |  | lastname   |
       | 11 | 'JimTwo'  |  | 'BrownTwo' |
 
-  @PartialUpdateBookingFailed @UnHappyPathss
+  @PartialUpdateBookingFailed @UnHappyPaths
   Scenario Outline: Update a current booking with a partial payload faild due to parameter error
     * def authToken = call read('Auth.feature@CreateTokenSuccessful')
     * def tokenValue = authToken.response.token
@@ -62,7 +62,7 @@ Feature: Booking - PartialUpdateBooking
       | 11 | ''        |  | 'BrownTwo' |
       | 11 | 'JimTwo'  |  | ''         |
 
-  @PartialUpdateBookingFailedEntrantEmpty @UnHappyPathss
+  @PartialUpdateBookingFailedEntrantEmpty @UnHappyPaths
   Scenario Outline: Update a current booking with a partial payload faild due to entrant empty
     * def authToken = call read('Auth.feature@CreateTokenSuccessful')
     * def tokenValue = authToken.response.token
@@ -78,7 +78,7 @@ Feature: Booking - PartialUpdateBooking
       | id |
       | 11 |
 
-  @PartialUpdateBookingFailedTokenIncorrect @UnHappyPathss
+  @PartialUpdateBookingFailedTokenIncorrect @UnHappyPaths
   Scenario Outline: Update a current booking with a partial payload faild due to token incorrect
     * def tokenValue = 'c3a732fd54119bb'
     * def entrant = {}
@@ -94,7 +94,7 @@ Feature: Booking - PartialUpdateBooking
       | id |
       | 11 |
 
-  @PartialUpdateBookingFailedCookieMissing @UnHappyPathss
+  @PartialUpdateBookingFailedCookieMissing @UnHappyPaths
   Scenario Outline: Update a current booking with a partial payload faild due to cookie missing
     * def entrant = {}
     Given url 'https://restful-booker.herokuapp.com/booking/<id>'

@@ -15,7 +15,7 @@ Feature: Booking - DeleteBooking
       | id |
       | 8  |
 
-  @DeleteBookingFailed @UnHappyPathss
+  @DeleteBookingFailed @UnHappyPaths
   Scenario Outline: Obtain the ids of all the bookings that exist within the API failed due to parameter error
     * def authToken = call read('Auth.feature@CreateTokenSuccessful')
     * def tokenValue = authToken.response.token
@@ -30,7 +30,7 @@ Feature: Booking - DeleteBooking
       | -1 |
       | 0  |
 
-  @DeleteBookingFailedTokenIncorrect @UnHappyPathss
+  @DeleteBookingFailedTokenIncorrect @UnHappyPaths
   Scenario Outline: Obtain the ids of all the bookings that exist within the API failed due to token incorrect
     * def tokenValue = 'c3a732fd54119bb'
     Given url 'https://restful-booker.herokuapp.com/booking/<id>'
@@ -43,7 +43,7 @@ Feature: Booking - DeleteBooking
       | id |
       | 1  |
 
-  @DeleteBookingFailedCookieMissing @UnHappyPathss
+  @DeleteBookingFailedCookieMissing @UnHappyPaths
   Scenario Outline: Obtain the ids of all the bookings that exist within the API failed due to cookie missing
     Given url 'https://restful-booker.herokuapp.com/booking/<id>'
     And header Content-Type = 'application/json'

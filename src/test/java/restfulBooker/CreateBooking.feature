@@ -51,7 +51,7 @@ Feature: Booking - CreateBooking
       | firstname | lastname | totalprice | depositpaid | checkin      | checkout     | additionalneeds |
       | 'Jim'     | 'Brown'  | 111        | true        | '2018-01-01' | '2018-01-01' | 'Breakfast'     |
 
-  @CreateBookingFailed @UnHappyPathss
+  @CreateBookingFailed @UnHappyPaths
   Scenario Outline: Create a new booking in the API failed due to parameter error
     * def entrant =
     """
